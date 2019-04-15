@@ -1,15 +1,15 @@
 function searchForVowels() {
-  var k = 0;
+  var vowels = 0;
   var searchInString = ['а', 'о', 'и', 'е', 'ё', 'э', 'ы', 'у', 'ю', 'я'];
-  var f = prompt('Введите текст:');
-  for (var i = 0; i < f.length; i++) {
+  var x = prompt('Введите текст:');
+  for (var i = 0; i < x.length; i++) {
     for (var j = 0; j < searchInString.length; j++) {
-      if (f[i] === searchInString[j]) {
-        ++k;
+      if (x[i] === searchInString[j]) {
+        ++vowels;
         break;
       }
     }
   }
-  return k ? k : 'Net sovpadenyi';
+  return vowels ? vowels : 'В вашем тексте не гласных букв';
 }
 console.log(searchForVowels());
