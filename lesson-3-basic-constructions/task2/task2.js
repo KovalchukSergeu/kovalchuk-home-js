@@ -6,16 +6,16 @@ var gender = confirm('Ваш пол - мужской?');
 var pension = false;
 
 while (typeof firstName !== 'string' || isNaN(firstName) === false) {
-  firstName = prompt('Введите вашe имя:', '');
+  firstName = prompt('Введены некорректные данные. Введите вашe имя:', '');
 }
 while (typeof secondName !== 'string' || isNaN(secondName) === false) {
-  secondName = prompt('Введите вашу фамилию:', '');
+  secondName = prompt('Введены некорректные данные. Введите вашу фамилию:', '');
 }
 while (typeof lastName !== 'string' || isNaN(lastName) === false) {
-  lastName = prompt('Введите ваше отчество:', '');
+  lastName = prompt('Введены некорректные данные. Введите ваше отчество:', '');
 }
 while (isNaN(fullYears)) {
-  fullYears = parseInt(prompt('Сколько вам лет:', ''), 10);
+  fullYears = parseInt(prompt('Введены некорректные данные. Сколько вам лет? :', ''), 10);
 }
 
 if (gender && (fullYears >= 63)) {
