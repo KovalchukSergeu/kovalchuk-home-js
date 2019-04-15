@@ -5,13 +5,13 @@ var fullYears = parseInt(prompt('Сколько вам лет:', ''), 10);
 var gender = confirm('Ваш пол - мужской?');
 var pension = false;
 
-while (typeof firstName !== 'string') {
+while (typeof firstName !== 'string' || firstName === "") {
   firstName = prompt('Введите вашe имя:', '');
 }
-while (typeof secondName !== 'string') {
+while (typeof secondName !== 'string' || secondName === "") {
   secondName = prompt('Введите вашу фамилию:', '');
 }
-while (lastName === false) {
+while (typeof lastName !== 'string' || secondName === "") {
   lastName = prompt('Введите ваше отчество:', '');
 }
 while (isNaN(fullYears)) {
