@@ -1,24 +1,17 @@
+"use strict";
 var tasksCompleted = {
   'Anna': 29,
   'Serg': 35,
   'Elena': 1,
   'Anton': 99
 };
-
-
-
-function isNumeric(n) {
-  return !isNaN(parseFloat(n)) && isFinite(n);
-}
-
-function multiplyNumeric(obj) {
-  for (var key in obj) {
-    if (isNumeric(obj[key])) {
-      obj[key] *= 2;
-    }
+var max = 0;
+var maxName = "";
+for (var name in tasksCompleted) {
+  if (max < tasksCompleted[name]) {
+    max = tasksCompleted[name];
+    maxName = name;
   }
 }
 
-multiplyNumeric(image);
-
-alert( 'menu width=' + image.width + ' height=' + image.height + ' title=' + image.title );
+alert( maxName || "нет сотрудников" );
