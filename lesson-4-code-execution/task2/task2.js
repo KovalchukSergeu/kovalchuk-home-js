@@ -19,3 +19,7 @@ function multiplyNumeric(obj) {
 multiplyNumeric(image);
 
 alert( 'menu width=' + image.width + ' height=' + image.height + ' title=' + image.title );
+
+module.exports = image;
+module.exports = isNumeric;
+module.exports = multiplyNumeric;

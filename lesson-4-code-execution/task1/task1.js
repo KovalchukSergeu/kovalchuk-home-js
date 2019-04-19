@@ -6,7 +6,7 @@ var tasksCompleted = {
   'Anton': 99
 };
 var max = 0;
-var maxName = "";
+var maxName = '';
 for (var name in tasksCompleted) {
   if (max < tasksCompleted[name]) {
     max = tasksCompleted[name];
@@ -14,4 +14,6 @@ for (var name in tasksCompleted) {
   }
 }
 
-alert( maxName || "нет сотрудников" );
+alert( maxName || 'нет сотрудников' );
+
+module.exports = tasksCompleted;
