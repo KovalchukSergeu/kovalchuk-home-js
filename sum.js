@@ -1,37 +1,20 @@
-function greet() {
-  console.log('Hi');
-}
+function greet(firstName, lastName, language) {
+  language = language || 'en';
 
-var anonymousGreet = function() {
-  console.log('Hi');
-};
-
-function log(a) {
-  console.log(a);
-  a();
-}
-
-
-log(function () {
-  console.log('as argument')
-});
-
-var c = {
-  name: 'The c object',
-  log: function () {
-    var self = this;
-    self.name = 'Updated c object';
-    console.log('SELF', self);
-
-    var setName = function (newName) {
-      this.name = newName;
-      self.name = newName;
-    };
-
-    setName('Update again!!! The c object');
-    console.log('this', this);
-    console.log('SELF-2', self);
+  if (arguments.length === 0) {
+    console.log('Missing arguments');
+    console.log('-----------------------------------------');
+    return;
   }
-};
+  console.log('first|Name', firstName);
+  console.log('last|Name', lastName);
+  console.log('language', language);
+  console.log('arguments', arguments);
+  console.log('arguments{0}', arguments[0]);
+  console.log('-----------------------------------------');
+}
 
-c.log();
+greet();
+greet('John');
+greet('John', 'Doe');
+greet('John', 'Doe', 'ru');
