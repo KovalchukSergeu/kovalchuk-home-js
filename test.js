@@ -1,25 +1,25 @@
-var firstSum = 124;
-var secondSum = 64;
-var thirdSum = 268;
-var tip;
+var john = {
+  mass: 62,
+  height: 180
+};
+var mike = {
+  mass: 69,
+  height: 190
+};
+var bmi;
 
-function tipCounting(x) {
-  if (x <= 50) {
-      tip = x * 0.2;
-  } else if (x <= 200) {
-    tip = x * 0.15;
-  } else {
-    tip = x * 0.1;
+function countBMI(obj) {
+  for (var key in obj) {
+    if (isNumeric(obj[key])) {
+      obj[key] += obj[key];
+    }
   }
-  return tip;
 }
 
-var firstTip = tipCounting(firstSum);
-var secondTip = tipCounting(secondSum);
-var thirdTip = tipCounting(thirdSum);
-
-var tipArrays = [firstTip, secondTip, thirdTip];
-var finalAmount = [ firstSum + secondSum + thirdSum + firstTip + secondTip + thirdTip];
-
-console.log(tipArrays);
-console.log(finalAmount);
+if (countBMI(john) > countBMI(mike)) {
+  console.log('BMI John more');
+} else if (countBMI(john) < countBMI(mike)) {
+  console.log('BMI Mike more');
+} else {
+  console.log('BMI are equal');
+}
