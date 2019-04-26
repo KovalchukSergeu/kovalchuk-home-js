@@ -28,3 +28,10 @@ var arr3 = mapForEach(arr1, function (item) {
 console.log(arr1);
 console.log(arr2);
 console.log(arr3);
+
+var checkPastLimit = function (limiter, item) {
+  return item > limiter;
+};
+
+var arr4 = mapForEach(arr1, checkPastLimit.bind(this, 2));
+console.log(arr4);
