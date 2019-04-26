@@ -1,20 +1,17 @@
-function greet(firstName, lastName, language) {
-  language = language || 'en';
-
-  if (arguments.length === 0) {
-    console.log('Missing arguments');
-    console.log('-----------------------------------------');
-    return;
+var person = {
+  firstName: 'John',
+  lastName: 'Doe',
+  getFullName: function () {
+    var fullName = this.firstName + ' ' + this.lastName;
+    return fullName;
   }
-  console.log('first|Name', firstName);
-  console.log('last|Name', lastName);
-  console.log('language', language);
-  console.log('arguments', arguments);
-  console.log('arguments{0}', arguments[0]);
-  console.log('-----------------------------------------');
-}
+};
 
-greet();
-greet('John');
-greet('John', 'Doe');
-greet('John', 'Doe', 'ru');
+var logName = function (lang1, lang2) {
+  console.log('Logged: ', this.getFullName());
+  console.log('Arguments: ', lang1 + ' ' + lang2);
+  console.log('----------------------------------');
+};
+
+var logPersonName = logName.bind(person, 'es');
+logPersonName('en');
