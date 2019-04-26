@@ -1,45 +1,30 @@
-var person = {
-  firstName: 'John',
-  lastName: 'Doe',
-  getFullName: function () {
-    var fullName = this.firstName + ' ' + this.lastName;
-    return fullName;
+// var arr1 = [1, 2, 3];
+// var arr2 = [];
+
+// for (var i = 0; i < arr1.length; i++) {
+//   arr2.push(arr1[i] * 2);
+// }
+
+
+function mapForEach(arr, fn) {
+  var newArr = [];
+  for (var i = 0; i < arr1.length; i++) {
+    newArr.push(
+      fn(arr[i])
+    );
   }
-};
-
-var logName = function (lang1, lang2) {
-  console.log('Logged: ', this.getFullName());
-  console.log('Arguments: ', lang1 + ' ' + lang2);
-  console.log('----------------------------------');
-};
-
-var logPersonName = logName.bind(person, 'es');
-logPersonName('en');
-
-logName.call(person, 'en', 'es');
-logName.apply(person, ['en', 'es']);
-
-(function (lang1, lang2) {
-  console.log('Logged: ', this.getFullName());
-  console.log('Arguments: ', lang1 + ' ' + lang2);
-  console.log('----------------------------------');
-}).apply(person, ['en', 'es']);
-
-var person2 = {
-  firstName: 'Jane',
-  lastName: 'Doe'
-};
-
-console.log(person.getFullName.apply(person2));
-
-// function curring
-
-function multiply(a, b) {
-  return a * b;
+  return newArr;
 }
 
-var multiplyByTwo = multiply.bind(this, 2);
-var multiplyByThree = multiply.bind(this, 3);
+var arr1 = [1, 2, 3];
+var arr2 = mapForEach(arr1, function (item) {
+  return item * 2;
+});
+var arr3 = mapForEach(arr1, function (item) {
+  return item > 2;
+});
 
-console.log(multiplyByTwo(4));
-console.log(multiplyByThree(4));
+
+console.log(arr1);
+console.log(arr2);
+console.log(arr3);
