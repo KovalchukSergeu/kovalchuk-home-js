@@ -31,3 +31,15 @@ var person2 = {
 };
 
 console.log(person.getFullName.apply(person2));
+
+// function curring
+
+function multiply(a, b) {
+  return a * b;
+}
+
+var multiplyByTwo = multiply.bind(this, 2);
+var multiplyByThree = multiply.bind(this, 3);
+
+console.log(multiplyByTwo(4));
+console.log(multiplyByThree(4));
