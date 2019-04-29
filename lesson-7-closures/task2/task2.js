@@ -1,14 +1,14 @@
 function interviewQuestion(job) {
-  var date;
+  var data;
   return function(name) {
     if (job === 'designer') {
-      date = name + ' ' + 'can you please explain what UX design is?';
+      data = name + ' ' + 'can you please explain what UX design is?';
     } else if (job === 'teacher') {
-      date = 'What subject do you teach' + ' ' + name + '?';
+      data = 'What subject do you teach' + ' ' + name + '?';
     } else {
-      date = 'Hello' + ' ' + name + ', what do you do?';
+      data = 'Hello' + ' ' + name + ', what do you do?';
     }
-    return date;
+    return data;
   };
 }
 
