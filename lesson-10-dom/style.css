@@ -18,13 +18,17 @@
   background-color: grey;
 }
 
+
 .top-part {
   flex-direction: row;
 }
 
 .bottom-part {
-  justify-content: center;
   align-items: center;
+}
+
+.top-part, .bottom-part {
+  justify-content: center;
 }
 
 .btn-wrapper {
