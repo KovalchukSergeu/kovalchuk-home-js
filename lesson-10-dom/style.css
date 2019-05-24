@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper, .top-part, .bottom-part {
+  display: flex;
+}
+
+.wrapper, .bottom-part {
+  flex-direction: column;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  background-color: grey;
+}
+
+
+.top-part {
+  flex-direction: row;
+}
+
+.bottom-part {
+  align-items: center;
+}
+
+.top-part, .bottom-part {
+  justify-content: center;
+}
+
+.btn-wrapper {
+  height: 6em;
+  width: 20em;
+  border-radius: 1em;
+  background-color: grey;
+  margin: 2em;
+  cursor: pointer;
+}
+
+.btn-input, .btn-get, .btn-delete, .btn-list {
+  width: 100%;
+  height: 100%;
+  border-radius: 1em;
+  color: white;
+}
+
+.btn-input {
+  background-color: #ff77a2;
+}
+
+.btn-get {
+  background-color: #f6ff6c;
+  color: #ff00d0;
+}
+
+.btn-delete {
+  background-color: #85ff97;
+}
+
+.btn-list {
+  background-color: #8aa0ff;
+}
+
+.drinks-wrapper {
+  width: 40em;
+  height: 10em;
+  border: 2px solid #f099ff;
+}
+
+.drink-list {
+  font-size: 1.5em;
+  color: white;
+}
