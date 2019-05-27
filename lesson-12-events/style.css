@@ -1,0 +1,6 @@
+img {
+  position: absolute;
+}
+img:hover {
+  cursor: pointer;
+}
