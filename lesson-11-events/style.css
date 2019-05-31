@@ -1,0 +1,35 @@
+label {
+  width: 150px;
+  float: left;
+}
+#name-dev {
+  width: 450px;
+}
+#name {
+  width: 450px;
+}
+#url {
+  width: 300px;
+}
+#date-start {
+  width: 70px;
+}
+#number-visit {
+  width: 200px;
+}
+#email {
+  width: 200px;
+}
+#date-start {
+  width: 200px;
+}
+select {
+  width: 200px;
+}
+textarea {
+  width: 300px;
+  height: 100px;
+}
+div {
+  height: 20px;
+}
