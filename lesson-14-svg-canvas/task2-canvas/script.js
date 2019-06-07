@@ -1,6 +1,5 @@
 'use strict';
 let baseRadius = 150; //радиус циферблата
-const circleRadius = 20; // радиус кружков с цифрами
 const wrapper = document.getElementById('wrapper');
 let canvas = document.createElement('canvas');
 var ctx = canvas.getContext("2d");
