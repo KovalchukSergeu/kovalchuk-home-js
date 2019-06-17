@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>MVC</title>
+  </head>
+  <body>
+    <script>
+
+    </script>
+
+    <table>
+      <tr>
+        <td></td>
+        <td><input type=button value='&uarr;' onclick='ShiftUp()'></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><input type=button value='&larr;' onclick='ShiftLeft()'></td>
+        <td></td>
+        <td><input type=button value='&rarr;' onclick='ShiftRight()'></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><input type=button value='&darr;' onclick='ShiftDown()'></td>
+        <td></td>
+      </tr>
+    </table>
+
+    <br/>
+
+    Бег: <input type='checkbox' id='IRun'>
+    <br/><br/>
+    <div style='position: relative; width: 300px; height: 300px; border: solid red 1px'>
+      <div id='IMan' style='position: absolute;
+              left: 50px; top: 50px; width: 10px; height: 10px;
+              background-color: green'></div>
+    </div>
+  </body>
+</html>
